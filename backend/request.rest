@@ -1,0 +1,99 @@
+###
+GET  http://localhost:5000/users
+
+
+
+
+###
+PATCH http://localhost:5000/user/bafcee37-df85-4cc6-944b-dad9a850cd29
+Content-Type: application/json
+
+{
+    "name": "CHOUROUK youneb",
+    "email": "khouloudyouneb@gmail.com",
+    "password": "ky",
+    "confPassword": "ky",
+    "role": "etudiant",
+    "datenaiss": "1995-05-03",
+    "cin": "11019518"
+}
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "CHOUROUK youneb",
+    "email": "chouroukyouneb@gmail.com",
+    "password": "Cy",
+    "confPassword": "Cy",
+    "role": "etudiant",
+    "datenaiss": "1995-05-03",
+    "cin": "11019518"
+}
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "khouloud youneb",
+    "email": "khouloudyouneb@gmail.com",
+    "password": "ky",
+    "confPassword": "ky",
+    "role": "etudiant",
+    "datenaiss": "1995-05-03",
+    "cin": "11019518"
+}
+
+###
+GET  http://localhost:5000/users/f010f9da-f368-41d6-bdfb-1eb0d75eed22
+
+
+
+###
+POST  http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"chouroukyouneb@gmail.com",
+    "password":"Cy"
+
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+
+
+
+
+###
+GET http://localhost:5000/cour
+
+
+###
+POST http://localhost:5000/cour
+Content-Type: application/json
+
+{
+    "name": "mathematique analyse",
+    "horaire":"2024-03-27"
+
+}
+
+###
+GET  http://localhost:5000/cour/a5cc15bb-c36e-48c8-b064-06221eb82767
+
+###
+PATCH http://localhost:5000/cour/a5cc15bb-c36e-48c8-b064-06221eb82767
+Content-Type: application/json
+
+{
+    "name": "analyse",
+    "horaire":"2024-03-28"
+
+}
