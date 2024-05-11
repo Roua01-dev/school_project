@@ -1,0 +1,76 @@
+/* Style du titre */
+.emploi-title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: black; /* Couleur du texte noire */
+  }
+  
+  /* Conteneur du bouton d'exportation et du sÃ©lecteur de semestre */
+  .export-dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px; /* Ajout de marges aux cÃ´tÃ©s */
+  }
+  
+  .semestre-select {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none; /* Suppression de la bordure */
+    background-color: #f2f2f2; /* Fond gris clair */
+    color: black; /* Couleur du texte noire */
+    margin-right: 10px; /* Marge Ã  droite pour l'espacement */
+  }
+  
+  .export-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #e2e2e2; /* Couleur de fond bleue pour le bouton */
+    color: rgb(0, 0, 0); /* Couleur du texte blanche */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .export-button:hover {
+    background-color: #676a6e; /* Couleur de fond bleue plus foncÃ©e au survol */
+  }
+  
+  /* Style du tableau */
+  .emploi-table {
+    color: black;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(242, 242, 242, 0.9); /* Fond du tableau avec transparence */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre lÃ©gÃ¨re pour le tableau */
+  }
+  
+  /* Style des lignes de sÃ©paration entre les jours */
+  .jour-separator {
+    background-color: rgb(255, 255, 255); /* Couleur de fond noire */
+    color: rgb(0, 0, 0); /* Couleur du texte blanche */
+  }
+  
+  /* Style des cellules */
+  .emploi-cell {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc; /* Bordure infÃ©rieure des cellules */
+  }
+  
+  /* Style des lignes */
+  .emploi-row:hover {
+    background-color: #f2f2f2; /* Changement de couleur au survol */
+  }
+
+  .main-content {
+    color: black;
+    margin-top: 100px; /* Ajustez la valeur selon vos besoins */
+    padding: 0 20px; /* Ajout de marges aux cÃ´tÃ©s */
+    max-width: 800px; /* Largeur maximale de l'emploi du temps */
+    margin-left: auto; /* Centrage horizontal */
+    margin-right: auto; /* Centrage horizontal */
+    overflow-x: auto; /* Activation du dÃ©filement horizontal si nÃ©cessaire */
+  }

@@ -1,0 +1,46 @@
+/* stages.css */
+/* Style du titre */
+.stages-title {
+    margin-top: 20px;
+    font-size: 24px;
+    color: black; /* Couleur du texte noire */
+  }
+  
+  /* Conteneur des offres */
+  .offres-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Style des offres individuelles */
+  .offre {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style du titre de l'offre */
+  .offre-titre {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; /* Couleur du texte gris foncÃ© */
+  }
+  
+  /* Style de la description de l'offre */
+  .offre-description {
+    margin-top: 10px;
+    color: #666; /* Couleur du texte gris */
+  }
+  
+  /* Style des dÃ©tails de l'offre */
+  .offre-details {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888; /* Couleur du texte gris clair */
+  }
+  .main-content {
+    margin-bottom: 200px; /* Ajoute une marge en bas de 50 pixels */
+  }

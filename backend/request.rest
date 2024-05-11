@@ -37,12 +37,12 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "khouloud youneb",
-    "email": "khouloudyouneb@gmail.com",
-    "password": "ky",
-    "confPassword": "ky",
-    "role": "etudiant",
-    "datenaiss": "1995-05-03",
+    "name": "roua youneb",
+    "email": "rouayouneb@gmail.com",
+    "password": "Ry",
+    "confPassword": "Ry",
+    "role": "admin",
+    "datenaiss": "2000-05-07",
     "cin": "11019518"
 }
 

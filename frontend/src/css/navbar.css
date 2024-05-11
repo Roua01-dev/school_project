@@ -1,0 +1,38 @@
+/* navbar.css */
+*{
+    background-color :white;
+}
+
+.navbar {
+    background-color: #f9f9f9; /* Fond gris clair */
+    padding: 10px 0; /* Ajustement du padding */
+    display: flex; /* Utilisation de flexbox */
+    justify-content: space-between; /* Alignement des Ã©lÃ©ments Ã  l'extrÃ©mitÃ© */
+    align-items: center; /* Centrer verticalement les Ã©lÃ©ments */
+  }
+  
+  .navbar-brand img {
+    width: 80px; /* Ajustement de la taille du logo */
+    height: auto; /* Garder les proportions */
+  }
+  
+  .navbar-menu {
+    margin-left: auto; /* Place les Ã©lÃ©ments de menu Ã  droite */
+  }
+  
+  .navbar-item {
+    margin-left: 10px; /* Espacement entre les Ã©lÃ©ments de menu */
+  }
+  
+  .navbar-item a {
+    text-decoration: none; /* Supprimer les soulignements des liens */
+    color: #333; /* Couleur du texte */
+    padding: 8px 12px; /* Espacement interne des liens */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition fluide */
+  }
+  
+  .navbar-item a:hover {
+    background-color: #ddd; /* Couleur de fond au survol */
+  }
+  

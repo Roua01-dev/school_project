@@ -1,13 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from "react"
 
-import { getMe } from "../features/authSlice";
+import Layout from './Layout'
+import FormAddCour from '../components/FormAddCour'
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import Layout from './Layout'
-import CoursList from '../components/CoursList'
+import { getMe } from "../features/authSlice";
 
-
-const Cours = () => {
+const AddCour = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isError } = useSelector((state) => state.auth);
@@ -22,10 +21,12 @@ const Cours = () => {
     }
   }, [isError, navigate]);
   return (
-   <Layout>
-    <CoursList/>
-   </Layout>
+    <div>
+      <Layout>
+    <FormAddCour/>
+ </Layout>
+    </div>
   )
 }
 
-export default Cours
+export default AddCour

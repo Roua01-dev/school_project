@@ -1,28 +1,49 @@
-import React  , { useState }from 'react'
+import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const FormAddUser = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confPassword, setConfPassword] = useState("");
-    const [role, setRole] = useState("");
-    const [datenaiss, setdatenaiss] = useState("");
-    const [cin, setcin] = useState("");
-    const [msg, setMsg] = useState("");
-    const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confPassword, setConfPassword] = useState("");
+  const [role, setRole] = useState("");
+  const [datenaiss, setDatenaiss] = useState("");
+  const [cin, setCin] = useState("");
+  const [msg, setMsg] = useState("");
+  const navigate = useNavigate();
 
+  const saveUser = async (e) => {
+    e.preventDefault();
+    try {
+      // Vérifier si les mots de passe correspondent
+      if (password !== confPassword) {
+        throw new Error("Les mots de passe ne correspondent pas.");
+      }
 
+      await axios.post("http://localhost:5000/users", {
+        name: name,
+        email: email,
+        password: password,
+        confPassword: confPassword, 
+        role: role,
+        datenaiss: datenaiss,
+        cin: cin
+      });
+      navigate("/users");
+    } catch (error) {
+      setMsg(error.message);
+    }
+  };
 
   return (
     <div>
-        <h1 className='title'>Users</h1>
-        <h2>Ajouter Nouveau Utilisateur</h2>
-        <div className="card is-shadowless">
-            <div className="card-content">
-                <div className="content">
-                <form >
+      <h1 className='title'>Users</h1>
+      <h2>Ajouter Nouveau Utilisateur</h2>
+      <div className="card is-shadowless">
+        <div className="card-content">
+          <div className="content">
+            <form onSubmit={saveUser}>
               <p className="has-text-centered">{msg}</p>
               <div className="field">
                 <label className="label">Name</label>
@@ -81,26 +102,50 @@ const FormAddUser = () => {
                       onChange={(e) => setRole(e.target.value)}
                     >
                       <option value="admin">Admin</option>
-                      <option value="user">User</option>
+                      <option value="etudiant">Etudiant</option>
+                      <option value="enseignant">Enseignant</option>
                     </select>
                   </div>
+                </div>
+              </div>
+              {/* Champ pour la date de naissance */}
+              <div className="field">
+                <label className="label">Date de Naissance</label>
+                <div className="control">
+                  <input
+                    type="date"
+                    className="input"
+                    value={datenaiss}
+                    onChange={(e) => setDatenaiss(e.target.value)}
+                    placeholder="Date de Naissance"
+                  />
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">CIN</label>
+                <div className="control">
+                  <input
+                    type="text"
+                    className="input"
+                    value={cin}
+                    onChange={(e) => setCin(e.target.value)}
+                    placeholder="CIN"
+                  />
                 </div>
               </div>
               <div className="field">
                 <div className="control">
                   <button type="submit" className="button is-success">
-                    Save
+                  Sauvegarder
                   </button>
                 </div>
               </div>
             </form>
-
-                </div>
-            </div>
+          </div>
         </div>
-      
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default FormAddUser
+export default FormAddUser;

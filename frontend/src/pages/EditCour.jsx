@@ -1,15 +1,14 @@
-import Layout from './Layout';
-import FormAddUser from '../components/FormAddUser';
+import Layout from './Layout'
+import FormEditCour from '../components/FormEditCour'
 import React, { useEffect } from "react";
 
 import { getMe } from "../features/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
-const AddUser = () => {
+const EditCour = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isError ,user} = useSelector((state) => state.auth);
+  const { isError } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(getMe());
@@ -18,15 +17,18 @@ const AddUser = () => {
   useEffect(() => {
     if (isError) {
       navigate("/");
-    } if(user && user.role!=="admin"){
-      navigate("/dashboard")
-          }
-        }, [isError,user, navigate]);
+    }
+  }, [isError, navigate]);
   return (
- <Layout>
-    <FormAddUser/>
- </Layout>
+
+    <div>
+        <Layout>
+    <FormEditCour/>
+        </Layout>
+        
+      
+    </div>
   )
 }
 
-export default AddUser
+export default EditCour

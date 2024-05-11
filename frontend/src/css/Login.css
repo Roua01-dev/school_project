@@ -36,16 +36,31 @@
 /* Login.css */
 
 /* Style pour agrandir les champs d'entrée et les boutons */
+
+
+
+
+/* Ajoutez ceci à votre fichier Login.css */
+
+/* Style pour positionner le champ de mot de passe en dessous du champ d'email */
+.col-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .input-large {
-  width:350px;
+  width: 350px;
   height: 40px;
-  border-radius: 10px;}
+  border-radius: 10px;
+  margin-bottom: 20px; /* Ajoute un espacement entre les champs */
+}
 
 .button-large {
-  /* Définit la largeur à 100% pour occuper tout l'espace disponible */
-background-color:#6190ba;
-width:350px;
-height: 30px;
-color: #ffffff;
-border-radius: 10px;
+  background-color: #6190ba;
+  width: 350px;
+  height: 30px;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-top: 20px; /* Ajoute un espacement au-dessus du bouton */
 }

@@ -1,0 +1,49 @@
+#dashboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .mini-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mini-box h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .mini-box p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .students {
+    background-color: #b8e2f1; /* Bleu pastel clair */
+  }
+  
+  .teachers {
+    background-color: #f7a7c0; /* Rose pastel clair */
+  }
+  
+  .courses {
+    background-color: #b8e2f1; /* Bleu pastel clair */
+  }
+  
+  .rooms {
+    background-color: #f7a7c0; /* Rose pastel clair */
+  }
+  
+  * {
+    background-color: #ffffff00;
+}
